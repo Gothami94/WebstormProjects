@@ -1,0 +1,17 @@
+<h2>
+  {{title}}|
+</h2>
+
+<div *ngIf="flag; then template1 else template2"></div>
+
+<ng-template #template1> Courses are available
+ <ul>
+    <li *ngFor="let item of Courses">{{item}}</li>
+  </ul> 
+</ng-template>
+
+<ng-template #template2>Courses are not available!</ng-template>
+
+<a routerLink="/">Home |</a>
+<a routerLink="/member">Members |</a>
+<a routerLink="/student">students |</a>
